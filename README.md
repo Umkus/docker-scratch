@@ -1,6 +1,6 @@
 # Docker scratch image
 
-Minimum viable Docker scratch image.
+Minimum viable Docker image.
 
 Allows you to distribute your code in a slim docker image artifact, separate from the execution environment.
 
