@@ -1,14 +1,16 @@
 # Docker scratch image
 
-Minimum viable Docker scratch image. 
+Minimum viable Docker scratch image.
 
-It's convenient in case you package your software into a minimalistic data-images, that don't actually being run, but 
-instead have their content referred via `volumes_from`.
+Allows you to distribute your code in a slim docker image artifact, separate from the execution environment.
 
-The only difference from the Docker Hub's native `scratch` image is addition of an empty (>1kb) binary that always returns `0`.
-It's set as image's entrypoint, so it's alwasy safe to run the resulted image.
+# Why?
 
-This allows you to distribute your code in a slim docker image artifact separate from the execution environment.
+It's convenient in case you package your software into minimalistic data-images, that don't actually being run, but 
+instead have their content referred to via `volumes_from` (after the container is created out of it).
+
+The only difference from the Docker Hub's native `scratch` image is addition of an empty (>1kb) linux binary that always returns `0`.
+It is set as image's entrypoint, so it's alwasy safe to run the resulted image and to create container out of it.
 
 # Usage
 
